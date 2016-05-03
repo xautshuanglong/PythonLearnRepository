@@ -3,9 +3,15 @@ print("log4py testing")
 import logging
 import logging.config
 
-logging.basicConfig(level=logging.DEBUG)# 默认级别：WARNING, WARN, 30
+# StreamHandler == ConsoleAppender,输出到流，控制台调试
+streamFmt = logging.Formatter('%(name)s %(asctime)s %(message)s')
+stream = logging.StreamHandler()
+stream.setLevel(logging.DEBUG)
+stream.setFormatter(streamFmt);
 
 log = logging.getLogger()
+log.addHandler(stream)
+
 log.debug("Debug Testing ...")
 log.info("Info Testing ...")
 log.warn("Warn Testing ...")
