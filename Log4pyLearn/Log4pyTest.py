@@ -1,11 +1,10 @@
 # encoding:utf-8
 print("log4py testing")
-import logging
-import logging.handlers
+import logging,logging.handlers
 import sys
 
 # StreamHandler == ConsoleAppender,输出到流，控制台调试
-streamFmt = logging.Formatter('[ %(levelname)-8s ] %(asctime)s %(name)s %(message)s','%H:%M:%S')
+streamFmt = logging.Formatter('[ %(levelname)-8s ] %(asctime)s.%(msecs)d %(name)s %(message)s','%H:%M:%S')
 stream = logging.StreamHandler(sys.stdout)
 stream.setLevel(logging.DEBUG)
 stream.setFormatter(streamFmt);
@@ -36,9 +35,5 @@ log.error("Error Testing ...")
 log.fatal("Fatal Testing ...")
 log.critical("Critical Testing ...")
 
-"""
-http://www.phperz.com/article/16/0120/93998.html
-http://blog.csdn.net/fxjtoday/article/details/6307285
-http://zeping.blog.51cto.com/6140112/1259065
-http://blog.csdn.net/chosen0ne/article/details/7319306
-"""
+#Informs the logging system to perform an orderly shutdown by flushing and closing all handlers. This should be called at application exit and no further use of the logging system should be made after this call.
+logging.shutdown()
