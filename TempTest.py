@@ -12,3 +12,6 @@ print fibo(2000)
 from Fibo import fibonacci
 
 print fibonacci(200)
+
+import Fibo
+print dir(Fibo)
