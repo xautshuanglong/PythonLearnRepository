@@ -1,3 +1,4 @@
+
 # encoding:utf-8
 
 '''
@@ -34,7 +35,7 @@ print multiply(3,2)
 print divide(3,2)
 '''
 
-
+'''
 from PackageLearn.Math import *
 
 print BasicCalculate.add(3,2)
@@ -47,4 +48,13 @@ for x in range(1,6):
 	print  repr(x).rjust(2),repr(x*x).rjust(3),repr(x*x*x).rjust(4)
 
 for x in range(1,6):
-		print '{0:2d} {1:3d} {2:4d}'.format(x,x*x,x*x*x)
+	print '{0:2d} {1:3d} {2:4d}'.format(x,x*x,x*x*x)
+'''
+
+string = "Helo,world."
+strTemp = "--Shuanglong"
+print string
+print str(string)
+print repr(string)
+print string.ljust(5)[2:7],strTemp.ljust(5)[2:7]
+print string.rjust(5),strTemp.rjust(5)
