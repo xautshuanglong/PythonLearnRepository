@@ -1,4 +1,4 @@
 # encoding:utf-8
 
-print "inside PackageLearn.Math"
+print "inside",__name__+".py"
 __all__ = ["BasicCalculate"]

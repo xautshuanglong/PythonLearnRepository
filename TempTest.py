@@ -36,9 +36,15 @@ print divide(3,2)
 
 
 from PackageLearn.Math import *
-from PackageLearn import Math
+
 print BasicCalculate.add(3,2)
 print BasicCalculate.minus(3,2)
 print BasicCalculate.multiply(3,2)
 print BasicCalculate.divide(3,2)
 print BasicCalculate.testValue
+
+for x in range(1,6):
+	print  repr(x).rjust(2),repr(x*x).rjust(3),repr(x*x*x).rjust(4)
+
+for x in range(1,6):
+		print '{0:2d} {1:3d} {2:4d}'.format(x,x*x,x*x*x)

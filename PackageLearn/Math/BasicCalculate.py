@@ -1,5 +1,7 @@
 # encoding:utf-8
 
+from .  import ComplexCalculate
+
 testValue = 9999
 
 def add(x,y):
