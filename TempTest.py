@@ -80,12 +80,11 @@ for item in lists:
 """
 
 table = {'key1':111,'key2':222,'key3':333}
-print('key1:{key1:d},key2:{key2:d},key3:{key3:d}'.format(**table))
-print('key1:{key1:#x},key2:{key2:#x},key3:{key3:d}'.format(**table))
+print('key1:{key1:d},key2:{key2:#d},key3:{key3:#x}'.format(**table))
 # 位置参数
 print "{0} is {1} years old".format("Wilber", 28)
 print "{} is {} years old".format("Wilber", 28)
-print "Hi, {0}! {0} is {1} years old".format("Wilber", 28)
+print "Hi, {1}! {1} is {0} years old".format(28,"Wilber")
 
 # 关键字参数
 print "{name} is {age} years old".format(name = "Wilber", age = 28)
