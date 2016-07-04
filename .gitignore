@@ -1,5 +1,6 @@
 # 日志文件
 *.log
+copy_obj_to_o/logs/*
 
 # 编译文件
 *.pyc
